@@ -6,7 +6,7 @@ import org.opencv.imgcodecs.Imgcodecs;
 
 import java.io.File;
 
-public class MainTest {
+public class Demo1_ReadImage {
         static {
             System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
             //注意程序运行的时候需要在VM option添加该行 指明opencv的dll文件所在路径
