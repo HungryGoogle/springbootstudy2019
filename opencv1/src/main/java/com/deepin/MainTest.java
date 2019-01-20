@@ -15,9 +15,10 @@ public class MainTest {
 
         public static void main(String[] args){
 
-            String imagePath = getResourceDictionary() + "/pic/lena.jpg";
+            String imagePath = PathUtils.getResourceDictionary() + "/pic/lena.jpg";
             System.out.println(imagePath);//user.dir指定了当前的路径
             Mat mat2 = Imgcodecs.imread(imagePath);
+
             System.out.println(mat2);
     }
 
@@ -31,15 +32,4 @@ public class MainTest {
         }catch(Exception e){}
     }
 
-    private static String getResourceDictionary() {
-        // 下面位置在 D:\workspace\project1\out\test\classes
-        File file = new File(MainTest.class.getResource("/").getPath());
-        try{
-            System.out.println(file.getCanonicalPath());//获取标准的路径
-            System.out.println(file.getAbsolutePath());//获取绝对路径
-            return file.getAbsolutePath();
-        }catch(Exception e){}
-
-        return "";
-    }
 }
